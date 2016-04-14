@@ -13,12 +13,12 @@
   (package-initialize))
 (require 'darcula-theme)
 ;; Eclipse Emacs
-(require 'eclim)
-(global-eclim-mode)
+;(require 'eclim)
+;(global-eclim-mode)
 ;;Autocomplete
 (require 'auto-complete-config)
 (ac-config-default)
 
 ;; add the emacs-eclim source
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+;(require 'ac-emacs-eclim-source)
+;(ac-emacs-eclim-config)
