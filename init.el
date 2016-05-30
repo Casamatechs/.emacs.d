@@ -22,3 +22,17 @@
 ;; add the emacs-eclim source
 ;(require 'ac-emacs-eclim-source)
 ;(ac-emacs-eclim-config)
+;; ECLIM
+
+(add-to-list 'load-path "~/emacs-eclim/")
+(require 'eclim)
+(global-eclim-mode)
+
+(custom-set-variables
+  '(eclim-eclipse-dirs '("~/nonStandard/eclipse"))
+  '(eclim-executable "~/nonStandard/eclipse/eclim"))
+
+;; add the emacs-eclim source
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+
