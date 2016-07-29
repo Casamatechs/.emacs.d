@@ -30,3 +30,15 @@
              '("article"
                "\\documentclass{article}"
                ("\\section{%s}" . "\\section*{%s}")))
+
+;; ECLIM
+
+(add-to-list 'load-path "~/emacs-eclim/")
+(require 'eclim)
+(global-eclim-mode)
+
+;; add the emacs-eclim source
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+
+
