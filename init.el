@@ -1,7 +1,12 @@
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 ;;(load-theme 'misterioso)
 
-
+(global-set-key (kbd "M-1") "|")
+(global-set-key (kbd "M-2") "@")
+(global-set-key (kbd "M-3") "#")
+(global-set-key (kbd "M-º") "\\")
+(global-set-key (kbd "M-ç") "}")
+(global-set-key (kbd "M-+") "]")
 
 (desktop-save-mode 1)
 (when (>= emacs-major-version 24)
