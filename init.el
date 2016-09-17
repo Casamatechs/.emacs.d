@@ -1,6 +1,11 @@
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 ;;(load-theme 'misterioso)
 
+;; No bars pls
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
+
 (global-set-key (kbd "M-1") "|")
 (global-set-key (kbd "M-2") "@")
 (global-set-key (kbd "M-3") "#")
@@ -46,4 +51,17 @@
 (require 'ac-emacs-eclim-source)
 (ac-emacs-eclim-config)
 
+;;; matlab-settings --- some matlab-mode settings
+(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+ (add-to-list
+  'auto-mode-alist
+  '("\\.m$" . matlab-mode))
+ (setq matlab-indent-function t)
+(setq matlab-shell-command "matlab")
+
+(setq matlab-shell-command "/Applications/MATLAB_R2016a.app/bin/matlab")
+(setq matlab-shell-command-switches (list "-nodesktop"))
+
+
+;;; matlab-settings.el ends here
 
