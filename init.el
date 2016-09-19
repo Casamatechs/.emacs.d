@@ -65,3 +65,4 @@
 
 ;;; matlab-settings.el ends here
 
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
