@@ -6,13 +6,6 @@
 (tool-bar-mode -1)
 
 
-(global-set-key (kbd "M-1") "|")
-(global-set-key (kbd "M-2") "@")
-(global-set-key (kbd "M-3") "#")
-(global-set-key (kbd "M-º") "\\")
-(global-set-key (kbd "M-ç") "}")
-(global-set-key (kbd "M-+") "]")
-
 (desktop-save-mode 1)
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -32,14 +25,6 @@
 ;; add the emacs-eclim source
 ;(require 'ac-emacs-eclim-source)
 ;(ac-emacs-eclim-config)
-
-(require 'ox-latex)
-(unless (boundp 'org-latex-classes)
-  (setq org-latex-classes nil))
-(add-to-list 'org-latex-classes
-             '("article"
-               "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")))
 
 ;; ECLIM
 
