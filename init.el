@@ -77,10 +77,6 @@
   ;; your preferred main font face here
   )
 
-;;linum-relative
-(use-package linum-relative
-  :ensure t)
-
 ;; Auto complete
 (use-package auto-complete
   :ensure t
@@ -90,6 +86,13 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
+
+;; Don't indent with tabs ffs!
+(setq-default indent-tabs-mode nil)
+
+;; Clean my file pl0x!
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -102,15 +105,15 @@
  '(ensime-sem-high-faces
    (quote
     ((var :foreground "#9876aa" :underline
-	  (:style wave :color "yellow"))
+          (:style wave :color "yellow"))
      (val :foreground "#9876aa")
      (varField :slant italic)
      (valField :foreground "#9876aa" :slant italic)
      (functionCall :foreground "#a9b7c6")
      (implicitConversion :underline
-			 (:color "#808080"))
+                         (:color "#808080"))
      (implicitParams :underline
-		     (:color "#808080"))
+                     (:color "#808080"))
      (operator :foreground "#cc7832")
      (param :foreground "#a9b7c6")
      (class :foreground "#4e807d")
